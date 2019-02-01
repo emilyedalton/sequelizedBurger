@@ -1,0 +1,43 @@
+<h1>burgers!</h1>
+<img src="./assets/images/burger.png" id="burgerpic" style="width:150px;height:150px;" alt="burger">
+<div id="outerContainer">
+  <div id="containerLeft">
+    <h2>make a burger!</h2>
+    <ul>
+      {{#each burgers}} {{#unless devoured}}
+      <p>
+        {{this.id}}. {{this.burger_name}}
+        <button data-id="{{this.id}}" class="burgerPUT">devour it!</button>
+      </p>
+      {{/unless}} {{/each}}
+      </p>
+    </ul>
+  </div>{{!--
+  <--end containerLeft --}} <form class="create-form">
+
+    <div class="form-group">
+      <h2 for="burg">enter the burger you would like to eat</h2>
+      <br>
+      <input type="text" id="burg" name="burger_name">
+    </div>
+    <button type="submit" class="burgerCREATE">make a burger</button>
+    </form>
+
+    <div id="containerRight">
+      <h2>devoured</h2>
+
+      <ul>
+        {{#each burgers}} {{#if devoured}}
+        <p>
+          {{this.id}}. {{this.burger_name}}
+
+        </p>
+        {{/if}} {{/each}}
+        </p>
+      </ul>
+
+
+
+      {{!-- end outerContainer --}}
+    </div>
+</div>
