@@ -20,13 +20,25 @@ router.get("/", function(req, res) {
 });
 
 // // Create all our routes and set up logic within those routes where required.
-// // //inserting
-// // router.post("/api/burger/new", function (req, res) {
-// //   burger.insertOne(['burger_name'], [req.body.burger_name], function (result) {
-// //     // Send back the ID of the new quote
-// //     res.redirect('/')
-// //   });
-// // });
+//inserting
+router.post("/api/burger/new", function (req, res) {
+  const newBurger = req.body;
+  console.log(req.body);
+  //define the properites you want it to create in your database
+  models.Burger.create({
+    burger_name: newBurger.burger_name,
+  devoured: newBurger.devoured
+  }).then(function(results) {
+    //always use .then it will wait until any promise is done
+    //whenever you're working with promieses .then is a safety net to ensure you get your data at the right time
+    // `results` here would be the newly created todo
+    res.json(results);
+  //  }).catch(err =>{
+  //   res.json(err);
+  });
+    // Send back the ID of the new quote
+    res.redirect('/')
+  });
 // // // updating
 // // router.put("/api/burger/:id", function (req, res) {
 // //   var condition = "id = " + req.params.id;
