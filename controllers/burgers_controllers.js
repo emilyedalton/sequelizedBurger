@@ -31,7 +31,6 @@ router.post("/api/burger/new", function (req, res) {
   }).then(function(results) {
     //always use .then it will wait until any promise is done
     //whenever you're working with promieses .then is a safety net to ensure you get your data at the right time
-    // `results` here would be the newly created todo
     res.json(results);
   //  }).catch(err =>{
   //   res.json(err);
@@ -40,25 +39,32 @@ router.post("/api/burger/new", function (req, res) {
     res.redirect('/')
   });
 // // // updating
-// // router.put("/api/burger/:id", function (req, res) {
-// //   var condition = "id = " + req.params.id;
+router.put("/api/burger/:id", function (req, res) {
+  
+    const devour = req.params;
 
-// //   // console.log("condition", condition);
+    const updatedModel = {
+      devoured: true,
 
-// //   burger.updateOne(
-// //     {
-// //       devoured: true
-// //     },
-// //     condition, function (result) {
-// //       if (result.changedRows === 0) {
-// //         // If no rows were changed, then the ID must not exist, so 404
-// //         return res.status(404).end();
-// //       } else {
-// //         res.status(200).end();
-// //       }
-// //     });
+      }
+    
+      const query = {
+        where:{
+        id:devour.id,
 
-// });
+        }
+      }
+    
+      models.Burger.update(updatedModel, query).then(results=>{
+      
+
+      res.json(results)
+    });
+  });
+    
+
+
+
 
 // Export routes for server.js to use.
 module.exports = router;
