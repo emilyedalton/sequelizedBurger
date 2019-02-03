@@ -1,7 +1,5 @@
 var express = require("express");
-// now we're using the express router
-// We are creating actions that are going to fire off as a route
-// you have routes delinated and each of them will be correlated into a controller file which will be required into your server file
+
 var router = express.Router();
 
 // Import the model (burger.js) to use its database functions.
@@ -35,7 +33,6 @@ router.post("/api/burger/new", function (req, res) {
   //  }).catch(err =>{
   //   res.json(err);
   });
-    // Send back the ID of the new quote
     res.redirect('/')
   });
 // // // updating
