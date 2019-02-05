@@ -33,7 +33,7 @@ router.post("/api/burger/new", function (req, res) {
   //  }).catch(err =>{
   //   res.json(err);
   });
-    res.redirect('/')
+    // res.redirect('/')
   });
 // // // updating
 router.put("/api/burger/:id", function (req, res) {
