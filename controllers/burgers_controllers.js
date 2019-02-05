@@ -30,8 +30,8 @@ router.post("/api/burger/new", function (req, res) {
     //always use .then it will wait until any promise is done
     //whenever you're working with promieses .then is a safety net to ensure you get your data at the right time
     res.json(results);
-  //  }).catch(err =>{
-  //   res.json(err);
+   }).catch(err =>{
+    res.json(err);
   });
     // res.redirect('/')
   });
