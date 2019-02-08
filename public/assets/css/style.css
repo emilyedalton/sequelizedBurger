@@ -28,6 +28,12 @@ button{
     font-family: 'Fjalla One', sans-serif;
 }
 
+ul{
+    font-family: 'Bree Serif', serif;
+
+
+}
+
 .create-form{
     flex-direction: column;
     display: flex;
