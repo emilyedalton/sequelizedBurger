@@ -1,28 +1,28 @@
 {
-  "name": "burger",
+  "name": "sequelizedBurger",
   "version": "1.0.0",
   "description": "[Burger](https://stormy-mountain-12270.herokuapp.com/) is a data-persistient, full stack application utilizing an MVC architecture and CRUD functionalities. Internal representations of the application's data are handled in a homegrown ORM and the handlebars view engine is used to present that information to the user.",
-  "main": "index.js",
+  "main": "server.js",
+  "dependencies": {
+    "express-handlebars": "^3.0.0",
+    "express": "^4.16.4",
+    "mysql2": "^1.6.5",
+    "sequelize": "^4.42.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emilyedalton/burger.git"
+    "url": "git+https://github.com/emilyedalton/sequelizedBurger.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/emilyedalton/burger/issues"
+    "url": "https://github.com/emilyedalton/sequelizedBurger/issues"
   },
-  "homepage": "https://github.com/emilyedalton/burger#readme",
-  "dependencies": {
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.0",
-    "mysql": "^2.16.0",
-    "mysql2": "^1.6.4",
-    "sequelize": "^4.42.0"
-  },
-  "devDependencies": {}
+  "homepage": "https://github.com/emilyedalton/sequelizedBurger#readme"
 }
