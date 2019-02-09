@@ -15,6 +15,7 @@ router.get("/", function(req, res) {
    console.log(hbsObject);
    res.render("index", hbsObject);
  });
+ 
 });
 
 // // Create all our routes and set up logic within those routes where required.
