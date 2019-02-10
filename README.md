@@ -1,5 +1,5 @@
  # sequelizedBurger
-[Burger](https://stormy-mountain-12270.herokuapp.com/) is a data-persistient, full stack application utilizing an MVC architecture and CRUD functionalities. Internal representations of the application's data are handled using sequelize models and the handlebars view engine is used to present that information to the user. 
+[Burger](https://powerful-coast-80195.herokuapp.com/) is a data-persistient, full stack application utilizing an MVC architecture and CRUD functionalities. Internal representations of the application's data are handled using sequelize models and the handlebars view engine is used to present that information to the user. 
 
 ## CRUD 
 
