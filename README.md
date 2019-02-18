@@ -18,6 +18,7 @@ Burger performs three out of the four basic functions of persistient storage.
 * [Express-Handlebars](https://www.npmjs.com/package/express-handlebars)
 * [Sequelize](https://www.npmjs.com/package/sequelize)
 * [Node](https://nodejs.org/en/)
+* CSS Flexbox
 
 ## Dirctions for future development
 
